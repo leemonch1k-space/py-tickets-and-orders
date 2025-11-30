@@ -99,10 +99,10 @@ class Ticket(models.Model):
         movie_title = self.movie_session.movie.title
         show_time = self.movie_session.show_time
         return (f"<Ticket: "
-            f"{movie_title} {show_time} "
-            f"(row: {self.row}, seat: {self.seat})"
-            f">"
-        )
+                f"{movie_title} {show_time} "
+                f"(row: {self.row}, seat: {self.seat})"
+                f">"
+                )
 
     def clean(self) -> None:
         max_row = self.movie_session.cinema_hall.rows
