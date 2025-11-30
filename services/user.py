@@ -29,7 +29,7 @@ def create_user(
     return user
 
 
-def get_user(user_id: int) -> get_user_model():
+def get_user(user_id: int) -> AbstractBaseUser:
     return get_user_model().objects.get(id=user_id)
 
 
